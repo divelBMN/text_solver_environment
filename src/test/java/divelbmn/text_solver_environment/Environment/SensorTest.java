@@ -2,6 +2,7 @@ package divelbmn.text_solver_environment.Environment;
 
 import divelbmn.text_solver_environment.Environment.dictionary.SensorDictionary;
 import org.junit.Before;
+import org.junit.Test;
 
 import static org.junit.Assert.*;
 
@@ -14,18 +15,20 @@ public class SensorTest {
 
 
     @Before
-    private void init() {
+    public void init() {
         originalSensor = new Sensor(SensorDictionary.HAS_ITEM, VALUE);
     }
 
 
-    public void sensorIsEqual() {
+    @Test
+    public void testSensorIsEqual() {
 
         assertTrue(originalSensor.isEqual(new Sensor(SensorDictionary.HAS_ITEM, VALUE)));
         assertFalse(originalSensor.isEqual(new Sensor(SensorDictionary.HAS_ITEM, ZERO_VALUE)));
     }
 
-    public void sensorIsEqual_wrong() {
+    @Test
+    public void testSensorIsEqual_wrong() {
 
         assertFalse(originalSensor.isEqual(new Sensor(SensorDictionary.NEAR_ITEM, VALUE)));
         assertFalse(originalSensor.isEqual(new Sensor(SensorDictionary.NEAR_ITEM, ZERO_VALUE)));

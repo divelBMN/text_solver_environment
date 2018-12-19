@@ -12,6 +12,7 @@ public class State {
 
     private Map<SensorDictionary, Sensor> sensors = new HashMap<>();
 
+
     public State addSensor(Sensor sensor) {
 
         sensors.put(sensor.getSensorType(), sensor);
