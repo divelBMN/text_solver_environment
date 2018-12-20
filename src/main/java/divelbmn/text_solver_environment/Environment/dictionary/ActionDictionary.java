@@ -1,8 +1,15 @@
 package divelbmn.text_solver_environment.Environment.dictionary;
 
 public enum ActionDictionary {
-    GOTO_ITEM,
-    GOTO_OWNER,
-    PICKUP_ITEM,
-    GIVE_ITEM
+    GOTO_ITEM ("gotoItem"),
+    GOTO_OWNER ("gotoOwner"),
+    PICKUP_ITEM ("pickupItem"),
+    GIVE_ITEM ("giveItem");
+
+    private String actionType;
+
+
+    ActionDictionary(String actionType) {
+        this.actionType = actionType;
+    }
 }
