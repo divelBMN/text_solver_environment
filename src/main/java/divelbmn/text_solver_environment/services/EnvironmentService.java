@@ -1,7 +1,9 @@
 package divelbmn.text_solver_environment.services;
 
-import org.springframework.stereotype.Service;
+import divelbmn.text_solver_environment.Environment.dto.ReactionRequestDto;
+import divelbmn.text_solver_environment.Environment.dto.StateDto;
 
-@Service
-public class EnvironmentService {
+public interface EnvironmentService {
+
+    StateDto doAction(ReactionRequestDto reactionRequestDto);
 }
