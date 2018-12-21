@@ -17,6 +17,13 @@ public class ActionDto {
 
 
     public Action makeAction() {
-        return new Action(ActionDictionary.valueOf(type));
+
+        ActionDictionary actionDictionary = ActionDictionary.getActionDictionary(type);
+        if (actionDictionary == null) {
+
+            return null;
+        }
+
+        return new Action(actionDictionary);
     }
 }

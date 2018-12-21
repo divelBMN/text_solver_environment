@@ -12,4 +12,17 @@ public enum ActionDictionary {
     ActionDictionary(String actionType) {
         this.actionType = actionType;
     }
+
+
+    public static ActionDictionary getActionDictionary(String type) {
+
+        for (ActionDictionary actionDictionary : values()) {
+            if (actionDictionary.actionType.equals(type)) {
+
+                return actionDictionary;
+            }
+        }
+
+        return null;
+    }
 }

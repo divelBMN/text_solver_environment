@@ -17,12 +17,8 @@ public class ReactionRequestDto {
     private ActionDto action;
 
 
-    public State makeStart() {
-
-        State startState = new State();
-        start.getSensors().forEach(sensorDto -> startState.addSensor(sensorDto.makeSensor()));
-
-        return startState;
+    public State makeState() {
+        return start.makeState();
     }
 
     public Action makeAction() {

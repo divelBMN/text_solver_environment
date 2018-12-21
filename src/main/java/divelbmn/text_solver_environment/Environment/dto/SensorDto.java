@@ -19,10 +19,18 @@ public class SensorDto {
 
     public SensorDto(Sensor sensor) {
         name = sensor.getSensorType().getSensorType();
+        value = sensor.getValue();
     }
 
 
     public Sensor makeSensor() {
-        return new Sensor(SensorDictionary.valueOf(name), value);
+
+        SensorDictionary sensorDictionary = SensorDictionary.getSensorDictionary(name);
+        if (sensorDictionary == null) {
+
+            return null;
+        }
+
+        return new Sensor(sensorDictionary, value);
     }
 }

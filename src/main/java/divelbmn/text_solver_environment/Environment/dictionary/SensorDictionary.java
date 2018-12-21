@@ -17,4 +17,15 @@ public enum SensorDictionary {
     }
 
 
+    public static SensorDictionary getSensorDictionary(String type) {
+
+        for (SensorDictionary sensorDictionary : values()) {
+            if (sensorDictionary.sensorType.equals(type)) {
+
+                return sensorDictionary;
+            }
+        }
+
+        return null;
+    }
 }
