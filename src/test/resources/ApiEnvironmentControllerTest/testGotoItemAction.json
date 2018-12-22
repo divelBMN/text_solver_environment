@@ -1,0 +1,8 @@
+{
+  "start": {
+    "sensors": []
+  },
+  "action": {
+    "type": "gotoItem"
+  }
+}

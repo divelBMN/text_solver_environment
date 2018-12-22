@@ -14,7 +14,7 @@ public class PickupItemAction implements ActionExecutor {
 
         if (start.hasSensor(new Sensor(SensorDictionary.NEAR_ITEM, ACTION_VALUE))) {
 
-            return new State()
+            return start
                     .addSensor(new Sensor(SensorDictionary.HAS_ITEM, ACTION_VALUE));
         }
 

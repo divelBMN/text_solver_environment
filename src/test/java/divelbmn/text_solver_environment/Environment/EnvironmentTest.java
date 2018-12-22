@@ -48,6 +48,7 @@ public class EnvironmentTest {
 
         assertTrue(correctResult.hasSensor(new Sensor(SensorDictionary.HAS_ITEM, VALUE)));
         assertFalse(wrongResult.hasSensor(new Sensor(SensorDictionary.HAS_ITEM, VALUE)));
+        assertTrue(correctResult.hasSensor(new Sensor(SensorDictionary.NEAR_ITEM, VALUE)));
     }
 
     @Test
@@ -69,7 +70,8 @@ public class EnvironmentTest {
                 new Action(ActionDictionary.GIVE_ITEM));
 
         assertTrue(correctResult.hasSensor(new Sensor(SensorDictionary.OWNER_HAS_ITEM, VALUE)) &&
-                correctResult.hasSensor(new Sensor(SensorDictionary.HAS_ITEM, ZERO_VALUE)));
+                correctResult.hasSensor(new Sensor(SensorDictionary.HAS_ITEM, ZERO_VALUE)) &&
+                correctResult.hasSensor(new Sensor(SensorDictionary.NEAR_OWNER, VALUE)));
         assertFalse(wrongResult_one.hasSensor(new Sensor(SensorDictionary.OWNER_HAS_ITEM, VALUE)) &&
                 correctResult.hasSensor(new Sensor(SensorDictionary.HAS_ITEM, ZERO_VALUE)));
         assertFalse(wrongResult_two.hasSensor(new Sensor(SensorDictionary.OWNER_HAS_ITEM, VALUE)) &&

@@ -31,4 +31,15 @@ public class StateDto {
 
         return state;
     }
+
+    public boolean hasSensor(SensorDto expectedSensor) {
+
+        List<SensorDto> findings = sensors.stream()
+                .filter(checked ->
+                        checked.getName().equals(expectedSensor.getName()) &&
+                        checked.getValue().equals(expectedSensor.getValue()))
+                .collect(Collectors.toList());
+
+        return findings.size() > 0;
+    }
 }

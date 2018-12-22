@@ -1,0 +1,17 @@
+{
+  "start": {
+    "sensors": [
+      {
+        "name": "hasItem",
+        "value": 1
+      },
+      {
+        "name": "nearOwner",
+        "value": 1
+      }
+    ]
+  },
+  "action": {
+    "type": "giveItem"
+  }
+}

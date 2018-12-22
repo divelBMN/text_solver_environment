@@ -1,0 +1,11 @@
+{
+  "start": {
+    "sensors": [{
+      "name": "nearItem",
+      "value": 1
+    }]
+  },
+  "action": {
+    "type": "pickupItem"
+  }
+}

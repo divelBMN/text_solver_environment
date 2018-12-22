@@ -16,7 +16,7 @@ public class GiveItemAction implements ActionExecutor {
         if (start.hasSensor(new Sensor(SensorDictionary.HAS_ITEM, ACTION_VALUE)) &&
                 start.hasSensor(new Sensor(SensorDictionary.NEAR_OWNER, ACTION_VALUE))) {
 
-            return new State()
+            return start
                     .addSensor(new Sensor(SensorDictionary.HAS_ITEM, ACTION_ZERO_VALUE))
                     .addSensor(new Sensor(SensorDictionary.OWNER_HAS_ITEM, ACTION_VALUE));
         }
