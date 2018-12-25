@@ -15,7 +15,7 @@ public class GotoItemActionTest {
     @Test
     public void testDoAction() {
 
-        ActionExecutor executor = new GotoItemAction();
+        Reactor executor = new GotoItemAction();
 
         State correctResult = executor.doAction(new State());
 

@@ -15,7 +15,7 @@ public class PickupItemActionTest {
     @Test
     public void testDoAction() {
 
-        ActionExecutor executor = new PickupItemAction();
+        Reactor executor = new PickupItemAction();
 
         State correctResult = executor.doAction(new State()
                 .addSensor(new Sensor(SensorDictionary.NEAR_ITEM, VALUE)));

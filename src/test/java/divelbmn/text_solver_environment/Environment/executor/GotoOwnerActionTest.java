@@ -15,7 +15,7 @@ public class GotoOwnerActionTest {
     @Test
     public void testDoAction() {
 
-        ActionExecutor executor = new GotoOwnerAction();
+        Reactor executor = new GotoOwnerAction();
 
         State correctResult = executor.doAction(new State());
 

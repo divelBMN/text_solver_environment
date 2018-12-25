@@ -6,7 +6,7 @@ public class Environment {
 
     public State doAction(State start, Action action) {
 
-        ActionExecutor executor = action.getExecutor();
+        Reactor executor = action.getExecutor();
         if (executor == null) {
 
             return start;

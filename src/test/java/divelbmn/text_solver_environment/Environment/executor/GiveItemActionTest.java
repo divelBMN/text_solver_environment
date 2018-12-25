@@ -16,7 +16,7 @@ public class GiveItemActionTest {
     @Test
     public void testDoAction() {
 
-        ActionExecutor executor = new GiveItemAction();
+        Reactor executor = new GiveItemAction();
 
         State correctResult = executor.doAction(new State()
                 .addSensor(new Sensor(SensorDictionary.NEAR_OWNER, VALUE))

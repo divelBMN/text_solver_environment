@@ -14,7 +14,7 @@ public class Action {
     private ActionDictionary action;
 
 
-    public ActionExecutor getExecutor() {
+    public Reactor getExecutor() {
 
         switch (action) {
             case GOTO_ITEM: return new GotoItemAction();

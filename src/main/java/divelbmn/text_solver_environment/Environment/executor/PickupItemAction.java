@@ -4,7 +4,7 @@ import divelbmn.text_solver_environment.Environment.Sensor;
 import divelbmn.text_solver_environment.Environment.State;
 import divelbmn.text_solver_environment.Environment.dictionary.SensorDictionary;
 
-public class PickupItemAction implements ActionExecutor {
+public class PickupItemAction implements Reactor {
 
     private final Float ACTION_VALUE = 1f;
 

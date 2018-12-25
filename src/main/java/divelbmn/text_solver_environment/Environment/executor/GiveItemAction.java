@@ -4,7 +4,7 @@ import divelbmn.text_solver_environment.Environment.Sensor;
 import divelbmn.text_solver_environment.Environment.State;
 import divelbmn.text_solver_environment.Environment.dictionary.SensorDictionary;
 
-public class GiveItemAction implements ActionExecutor {
+public class GiveItemAction implements Reactor {
 
     private final Float ACTION_VALUE = 1f;
     private final Float ACTION_ZERO_VALUE = 0f;
